@@ -122,8 +122,8 @@ def new_service(request, category_id):
 
 def service(request, category_id):
     categories = Category.objects.get(id=category_id)
-    services = Services.objects.filter(category=categories.id).all()
-    comment = Comment.objects.filter(service=services).all()
+    services = Services.objects.filter(category=categories.id).all().prefetch_related('comment_set')
+    # comment = Comment.objects.filter(service=services).all()
     return render(request, 'all_apps/service.html', {"services": services, "category_id": category_id, "comment": comment})
 
 

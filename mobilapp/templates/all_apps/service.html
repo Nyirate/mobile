@@ -10,10 +10,11 @@
     <p>{{s.company}}</p>
     <img src="{{s.image.url}}">
     <a href="{% url 'new-comment' service_id=s.id%}"><button>review</button></a>
+    {% for c in s.comment_set.all %}
+    <span><p><strong>{{c.name}}:</strong>{{c.feedback}}</p></span>
+    </div>
+    {% endfor %}
     {% endfor %}
     </div>
-    {% for c in comment %}
-<span><p><strong>{{c.name}}:</strong>{{c.feedback}}</p></span>
-</div>
-{% endfor %}
+    
 {% endblock %}    
