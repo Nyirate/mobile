@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Account,Category,Services
+from .models import Account,Category,Services,Booking
 
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
-        fields = ('email', 'username')
+        fields = ('email', 'username','password')
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,4 +14,10 @@ class CategorySerializer(serializers.ModelSerializer):
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Services
-        fields = ('name','category','description','image')                
+        fields = ('name','category','description','image')
+        
+class BookingSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Booking
+        fields = ('name','email','location','telephone','time','service')                
+                        

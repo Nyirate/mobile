@@ -88,9 +88,6 @@ class CompanyProfile(models.Model):
 
 	def __str__(self):
 		return self.name
-
-		
-
 		@classmethod
 		def find_category(cls,category_id):
 			category=category.id
@@ -101,18 +98,27 @@ class Services(models.Model):
 	name=models.CharField(max_length=70)
 	category=models.ForeignKey(Category,on_delete=models.CASCADE)
 	description=models.CharField(max_length=250)
-	companyprofile=models.ForeignKey(CompanyProfile,on_delete=models.CASCADE)
+	# companyprofile=models.ForeignKey(CompanyProfile,on_delete=models.CASCADE)
 	location=models.SlugField(max_length=500)
 	image = models.ImageField(upload_to='images/')
 
-	def __str__(self):
-		return self.name
+	
+
+	def save_services(self):
+		self.save()		
         
-		@classmethod
-		def find_category(cls,category_id):
-			category=category.id
-			category1 = cls.objects.get(category=category_id)
-			return category1
+	@classmethod
+	def find_category(cls,category_id):
+		category=category.id
+		category1 = cls.objects.get(category=category_id)
+		return category1
+
+	@classmethod
+	def search_by_name(cls,service):
+		certain_service = cls.objects.filter(name__icontains=service)
+		return certain_service
+	def __str__(self):
+		return self.name			
 
 class Booking(models.Model):
 	name=models.CharField(max_length=100)
@@ -120,6 +126,7 @@ class Booking(models.Model):
 	email=models.EmailField(max_length=70)
 	location=models.SlugField(max_length=100)
 	time=models.DateTimeField()
+	# category=models.ForeignKey(Category,on_delete=models.CASCADE)
 	service=models.ForeignKey(Services,on_delete=models.CASCADE)
 
 	def __str__(self):
