@@ -3,13 +3,14 @@
 {% block content %}
 <div class="container">
         <h1>welcome to services</h1>
-    <a href="{% url 'new-service' category_id%}"><button>Register Business</button></a>
+        <a href="{% url 'new-service' category_id%}"><button>Register Business</button></a>
     {% for s in services %}
     <p>{{s.name}}</p>
     <p>{{s.description}}</p>
     <p>{{s.company}}</p>
     <img src="{{s.image.url}}">
     <a href="{% url 'new-comment' service_id=s.id%}"><button>review</button></a>
+    
     {% for c in s.comment_set.all %}
     <span><p><strong>{{c.name}}:</strong>{{c.feedback}}</p></span>
     </div>

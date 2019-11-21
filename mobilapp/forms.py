@@ -48,5 +48,11 @@ class CompanyProfileForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ('feedback','service','companyprofile')       
+        fields = ('feedback','service','companyprofile')  
+
+
+class NewBookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ['name','telephone','email','location','time','service']     
         

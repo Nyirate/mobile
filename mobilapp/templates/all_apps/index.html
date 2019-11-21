@@ -1,15 +1,129 @@
-<a href="{% url 'logout' %}">logout</a> |<a href="{% url 'login' %}">login</a> 
-|<a href="{% url 'profile' %}">Create your company's profile</a>|<a href="{% url 'profiledisplay' %}">Profile</a>
+{%extends "all_apps/base.html"%}
+{% load staticfiles %}
+{% block content %}
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Bevan&display=swap" rel="stylesheet">
+  <title>Mobil</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+    type="text/css">
+  <link href="static/css/styles.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="static/js/scripts.js"></script>
+  <style>
+    body {}
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      padding: 2px 16px;
+    }
+  </style>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <a href="{% url 'logout' %}">logout</a> |<a href="{% url 'login' %}">login</a>
+
+        <a href="{% url 'profiledisplay' %}">Profile</a>
+      </div>
+      <div class="col-lg-6">
+        <h1>hii {{request.user.username}} </h1>
+      </div>
+    </div>
+  </div>
+  <header class="masthead text-white text-center"
+    style="  position: relative;background-color: #343a40;background: url('https://clearcutpainting.co.uk/wp-content/uploads/2019/09/top-16-essential-painting-tools.jpg') no-repeat center center;background-size: cover;padding-top: 8rem;padding-bottom: 8rem;">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5" style="color:white">Get instant access to reliable and affordable services</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
 
 
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
 
-<h1>hii {{request.user.username}} </h1>
-{% if user.is_authenticated%}
-<p><a href="{% url 'logout' %}"></a></p>
-{% else %}
-<p><a href="{% url 'login' %}"></a></p>
-{% endif %}
+  <!-- category Showcases -->
 
-{% for c in categories %}
-<p><a href="{%url 'service' category_id=c.id%}"> {{c.name}}</a></p>
-{% endfor %}
+  <a href="{% url 'profile' %}"><button>Register your business</button></a>
+  <button onclick="window.location.href = 'service.html'">Get a service</button>
+  {% if user.is_authenticated%}
+  <p><a href="{% url 'logout' %}"></a></p>
+  {% else %}
+  <p><a href="{% url 'login' %}"></a></p>
+  {% endif %}
+
+ 
+ 
+  <section class="showcase bg-light text-center">
+    <div class="container-fluid p-0"
+      style="height: 400px; background: url('https://www.familyvacationcritic.com/uploads/sites/19/2019/08/teen-laptop-smiling-books.jpg')no-repeat center center;background-size: cover;">
+      <div style="background-color:rgb(192, 182, 182);margin-left: 50px;margin-top:20px;width: 200px;text-align: left"
+        class="row">
+        <h1 style="text-align: center">Why do you choose Mobil?</h1>
+        <p style="padding: 10px 0 0 0;">Your satisfaction and safety are our primary concerns. When you choose mobil, you
+          know you'll be well taken care of. We'll work to make it right if you're not immediately satisfied.</p>
+      </div>
+
+    </div>
+  </section>
+   <!-- Image Showcases -->
+   <section class="showcase bg-light text-center">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-3"><!-- instal and repair -->
+          <div class="row no-gutters" style="margin-left: 100px;">
+  
+            <div class="card" style="width:200px;cursor: pointer;opacity: 0.9;transform: scale(0.88);">
+                {% for c in categories %}
+                <a href="{%url 'service' category_id=c.id%}"> 
+      
+              <img class="card-img-top"
+                src="https://eesllcfl.com/wp-content/uploads/2018/03/Electrical-Installation-and-Repair-Services-300x200.jpeg"
+                alt="Card image" style="height: 200px;" >
+                <p><a href="{%url 'service' category_id=c.id%}"> {{c.name}}</a></p>
+              </a>
+
+
+                {%endfor%}
+          
+              </div>
+  
+            </div>
+          </div>
+        
+</body>
+
+</html>
+{% endblock %}
