@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+</head>
+<body>
+<div class="pos-f-t" style="font-size:80%;font-family: 'Prociono', serif;">
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <img src="https://southlondonelectricians.co.uk/wp-content/uploads/2013/07/24-hours.png" style="margin-left:200px;height: 50px;width: 80px;border-radius: 50%">         
+
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link active" href="" style="color: white">Home</a>
+                </li>
+                
+                <div class="dropdown">
+                        <a class="btn btn-default dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white; margin-top: 4%">
+                         Services
+                        </a>
+                      
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: white;">
+                          <a class="dropdown-item" href="" style="color: black">Painting</a>
+                          <a class="dropdown-item" href="" style="color: black">Plumbing</a>
+                          <a class="dropdown-item" href="installation&Repair.html" style="color: black">Handyman</a>
+                          <a class="dropdown-item" href="" style="color: black">Massage</a>
+                          
+                        </div>
+                </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" style="color: white">Abou Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <span><a class="nav-link" href="/accounts/register/" style="color: white">Contacts</a></span>
+                    </li>
+            </ul>
+    </nav>
+
+    <div class="collapse" id="navbarToggleExternalContent">
+        <div class="bg-dark p-4">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="" style="color: white">Busineses</a>
+                </li>
+                {% if user.is_authenticated %} 
+                <li class="nav-item">
+                    <a class="nav-link" href="" style="color: white">Busines Profile</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="" style="color: white">Change Password</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="" style="color: white">Logout</a>               
+                </li>         
+                                            
+                {% else %}
+                <li class="nav-item">
+                    <a class='btn btn-default' href="" style="color: white">Login</a>         
+                </li> 
+                  
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

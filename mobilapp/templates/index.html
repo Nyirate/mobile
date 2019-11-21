@@ -1,4 +1,273 @@
-<a href="{% url 'logout' %}">logout</a> |<a href="{% url 'login' %}">login</a>
+
+{%extends 'base.html'%}
+{%load bootstrap4%}
+{%load static %}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Bevan&display=swap" rel="stylesheet">
+  <title>Mobil</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="static/css/styles.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="static/js/scripts.js"></script>
+  <!-- Custom styles for this template -->
+  
+
+</head>
+
+<body>
+  <!-- Masthead -->
+  <header class="masthead text-white text-center" style="  position: relative;background-color: #343a40;background: url('https://clearcutpainting.co.uk/wp-content/uploads/2019/09/top-16-essential-painting-tools.jpg') no-repeat center center;background-size: cover;padding-top: 8rem;padding-bottom: 8rem;">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5" style="color:white">Get instant access to reliable and affordable services</h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="email" class="form-control form-control-lg" placeholder="what  service are you looking for?">
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center" style="padding-top:20px">
+    <div class="container">
+      <div class="row" style="padding-bottom: 100px">
+        <div class="col-lg-3">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-screen-desktop m-auto text-primary"></i>
+            </div>
+            <a href="" style="text-decoration: none;color:black;">
+            <h5><img src="https://as2.ftcdn.net/jpg/01/65/56/37/500_F_165563714_ChrJMmSi4RVRATQIXjcJUwpv9OaAPkaS.jpg"style="height:50px;width:50px;">Installation & Repair</h5>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-screen-desktop m-auto text-primary"></i>
+            </div>
+            <a href=""style="text-decoration: none;color:black;">
+            <h5><img src="https://static.pixlee.com/photos/242723719/medium/11c9d0009b1860dc2844.jpg" style="height: 50px;widows: 50px;"> Beauty & wellness</h5>
+          </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-layers m-auto text-primary"></i>
+            </div>
+            <a href="" style="text-decoration: none;color:black;">
+            <h5><img src="https://cdn0.iconfinder.com/data/icons/cleaning-and-maid-2/50/68-512.png"style="height:50px;width:50px;">Cleaning & care</h5>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+            <div class="features-icons-icon d-flex">
+              <i class="icon-check m-auto text-primary"></i>
+            </div>
+            <a href="" style="text-decoration: none;color:black;">
+            <h6><img src="https://3k7by215ywuf340yi3alsfso-wpengine.netdna-ssl.com/wp-content/uploads/sites/5/2015/05/Managerial-Accounting.jpg" style="height: 60px;width:70px;">Accounting & consultancy</h5>
+            <!-- <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p> -->
+           </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Showcases -->
+  <section class="showcase bg-light text-center">
+    <div class="container-fluid p-0">
+      <div class="row no-gutters" style="margin-left: 100px;">
+
+        <div class="card" style="width:200px;cursor: pointer;opacity: 0.6;transform: scale(0.88);">
+          <img class="card-img-top" src="https://eesllcfl.com/wp-content/uploads/2018/03/Electrical-Installation-and-Repair-Services-300x200.jpeg" alt="Card image" style="height: 200px;">
+          <div class="card-body">
+            <a href="#" class="card-text">Electrician &Appliance repair</a>
+          </div>
+        </div>
+        &nbsp;
+        <div class="card" style="width:200px;cursor: pointer;opacity: 0.6;transform: scale(0.88);">
+          <img class="card-img-top" src="https://deltaplumbingandelectrical.com/files/2018/11/subpage2.jpg?" alt="Card image" style="height: 200px;">
+          <div class="card-body">
+            <a href="#" class="card-text">General Handyman</a>
+          </div>
+        </div>
+        <div class="card" style="width:200px;cursor: pointer;opacity: 0.6;transform: scale(0.88);">
+          <img class="card-img-top" src="https://www.freshbooks.com/blog/wp-content/uploads/2016/06/Handyman-businessjpg.jpg" alt="Card image" style="height:200px;">
+          <div class="card-body">
+            
+            <a href="#" class="card-text">Painting</a>
+          </div>
+        </div>
+        &nbsp;
+        <div class="card" style="width:200px;cursor: pointer; opacity: 0.6;transform: scale(0.88);">
+          <img class="card-img-top" src="https://www.bergerpaints.com/blog/wp-content/uploads/2019/05/house_wall_painting.png" alt="Card image" style="height: 200px">
+          <div class="card-body">
+            
+            <a href="#" class="card-text">Floor sanding & vanishing</a>
+          </div>
+        </div>
+        <div class="card" style="width:200px;cursor: pointer;opacity: 0.6;transform: scale(0.88);">
+          <img class="card-img-top" src="https://www.cummingslocksmiths.co.uk/wp-content/uploads/2015/12/gallery3.jpg" alt="Card image" style="height:200px">
+          <div class="card-body">
+            
+            <a href="#" class="card-text">LOCKSMITH</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="showcase bg-light text-center">
+      <div class="container-fluid p-0" style="height: 400px; background: url('https://www.familyvacationcritic.com/uploads/sites/19/2019/08/teen-laptop-smiling-books.jpg')no-repeat center center;background-size: cover;">
+        <div style="background-color:rgb(192, 182, 182);margin-left: 50px;margin-top:20px;width: 200px;text-align: left" class="row">
+           <h1 style="text-align: center">Why do you choose Mobil?</h1>
+          <p style="padding: 10px 0 0 0;">Your satisfaction and safety are our primary concerns. When you choose Lynk, you know you'll be well taken care of. We'll work to make it right if you're not immediately satisfied.</p>
+        </div>
+        
+      </div>
+    </section>
+
+  <!-- Testimonials -->
+    <div class="container" style="height: 400px">
+      <h2 class="mb-5" style=" margin-left:400px;margin-top: 30px;">Join our happy clients</h2>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0" style="box-shadow: 0px 5px 5px 0px #adb5bd;">
+            <img class="img-fluid rounded-circle mb-2" src="https://ak4.picdn.net/shutterstock/videos/24250754/thumb/1.jpg" alt="" style="max-width: 8rem;box-shadow: 0px 5px 5px 0px #adb5bd;">
+            <h5>Margaret E.</h5>
+            <p class="font-weight-light mb-0">"This is fantastic! Thanks so much guys!ddddddddddddddddddd
+              ddddddddghhhhhjjbvccxdrrffefvbbvfdddddddd"</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0" style="box-shadow: 0px 5px 5px 0px #adb5bd;">
+            <img class="img-fluid rounded-circle mb-2" src="http://www.derebus.org.za/wp-content/uploads/2016/03/Mfundo-Radebe.jpg" alt="" style="max-width: 8rem;box-shadow: 0px 5px 5px 0px #adb5bd;">
+            <h5>Fred S.</h5>
+            <p class="font-weight-light mb-0">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="testimonial-item mx-auto mb-5 mb-lg-0" style="box-shadow: 0px 5px 5px 0px #adb5bd;">
+            <img class="img-fluid rounded-circle mb-2" src="http://c47b43ea47b860c0822e-12f50fc0d125ab3c86345ada15f21620.r48.cf2.rackcdn.com/17501082_0_51839cd5afcf4435395a28c6ae11f8d9.jpg" alt="" style="max-width: 8rem;box-shadow: 0px 5px 5px 0px #adb5bd;">
+            <h5>Sarah W.</h5>
+            <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="call-to-action text-white text-center" style="  position: relative;background-color: #343a40;background: url('https://s3.amazonaws.com/carpenterjames.com/app/public/spree/products/1724/product/JJ_170130_MSS_054.jpg?1487051688') no-repeat center center;background-size: cover;padding-top: 7rem;padding-bottom: 7rem;">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h2 class="mb-4" style="color: rgb(189, 197, 189)">Write your comment</h2>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form>
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="email" class="form-control form-control-lg" placeholder="comment...">
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Post</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light" style="padding-top: 4rem;padding-bottom: 4rem;">
+    <div class="container">
+      <div class="row" style="width: 100%;">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <h2 style="margin-left: 400px;">Popular services</h2>
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+{%endblock%}
+
+<!-- <a href="{% url 'logout' %}">logout</a> |<a href="{% url 'login' %}">login</a>
 
 <h1>hii {{request.user.username}} </h1>
 {% if user.is_authenticated%}
@@ -9,4 +278,4 @@
 
 {% for c in categories %}
 <p><a href="{%url 'service' category_id=c.id%}"> {{c.name}}</a></p>
-{% endfor %}
+{% endfor %} -->
