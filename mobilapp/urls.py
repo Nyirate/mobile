@@ -14,7 +14,10 @@ urlpatterns=[
     url(r'register/',views.registration_view,name = 'register'),
     url(r'logout/',views.logout_view,name = 'logout'),
     url(r'^api/account/$', views.AccountList.as_view(),name='accounts-api'),
-    url(r'^api/category/$', views.CategoryList.as_view(),name='category-api')
+    url(r'^api/category/$', views.CategoryList.as_view(),name='category-api'),
+    url(r'^account/profileform', views.profile_form, name='profile'),
+    url(r'^account/profiledisplay', views.company_profile, name='profiledisplay'),
+    url(r'^new/comment/(?P<service_id>\d+)', views.new_comment, name='new-comment'),
 
 ]
 

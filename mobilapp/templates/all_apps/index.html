@@ -1,0 +1,15 @@
+<a href="{% url 'logout' %}">logout</a> |<a href="{% url 'login' %}">login</a> 
+|<a href="{% url 'profile' %}">Create your company's profile</a>|<a href="{% url 'profiledisplay' %}">Profile</a>
+
+
+
+<h1>hii {{request.user.username}} </h1>
+{% if user.is_authenticated%}
+<p><a href="{% url 'logout' %}"></a></p>
+{% else %}
+<p><a href="{% url 'login' %}"></a></p>
+{% endif %}
+
+{% for c in categories %}
+<p><a href="{%url 'service' category_id=c.id%}"> {{c.name}}</a></p>
+{% endfor %}

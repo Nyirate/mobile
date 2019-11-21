@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate
 
-from .models import Account,Services
+from .models import *
 
 
 class RegistrationForm(UserCreationForm):
@@ -34,3 +34,19 @@ class NewServiceForm(forms.ModelForm):
     class Meta:
         model = Services
         exclude = ['']
+
+
+class CompanyProfileForm(forms.ModelForm):
+    class Meta:
+        model = CompanyProfile
+        fields = ('name', 'email','location',)
+        # widgets = {
+        #     'tags': forms.CheckboxSelectMultiple(),
+        # }
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('feedback','service','companyprofile')       
+        

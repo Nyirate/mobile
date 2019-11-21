@@ -1,0 +1,19 @@
+{%extends "all_apps/base.html"%}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+        <h1>welcome to services</h1>
+    <a href="{% url 'new-service' category_id%}"><button>Register Business</button></a>
+    {% for s in services %}
+    <p>{{s.name}}</p>
+    <p>{{s.description}}</p>
+    <p>{{s.company}}</p>
+    <img src="{{s.image.url}}">
+    <a href="{% url 'new-comment' service_id=s.id%}"><button>review</button></a>
+    {% endfor %}
+    </div>
+    {% for c in comment %}
+<span><p><strong>{{c.name}}:</strong>{{c.feedback}}</p></span>
+</div>
+{% endfor %}
+{% endblock %}    
