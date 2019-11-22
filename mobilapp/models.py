@@ -68,6 +68,7 @@ class Account(AbstractBaseUser, models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=50)
     user = models.ForeignKey('Account', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='images/')
 
     def __str__(self):
         return self.name
@@ -158,22 +159,22 @@ class Services(models.Model):
 #             return category1
 
 
-class Booking(models.Model):
-    name = models.CharField(max_length=100)
-    telephone = models.IntegerField()
-    email = models.EmailField(max_length=70)
-    location = models.SlugField(max_length=100)
-    time = models.DateTimeField()
-    service = models.ForeignKey(Services, on_delete=models.CASCADE)
+# class Booking(models.Model):
+#     name = models.CharField(max_length=100)
+#     telephone = models.IntegerField()
+#     email = models.EmailField(max_length=70)
+#     location = models.SlugField(max_length=100)
+#     time = models.DateTimeField()
+#     service = models.ForeignKey(Services, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.name
+#     def __str__(self):
+#         return self.name
 
-        @classmethod
-        def find_service(cls, service_id):
-            service = service.id
-            service1 = cls.objects.get(service=service_id)
-            return service1
+#         @classmethod
+#         def find_service(cls, service_id):
+#             service = service.id
+#             service1 = cls.objects.get(service=service_id)
+#             return service1
 
 
 class Comment(models.Model):

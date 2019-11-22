@@ -67,7 +67,7 @@ class BookingList(APIView):
 
 
 # Create your views here.
-@login_required(login_url='register/')
+# @login_required(login_url='register/')
 def welcome(request):
   # context ={}
   accounts=Account.objects.all()

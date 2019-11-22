@@ -4,13 +4,26 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Bevan&display=swap" rel="stylesheet">
   <title>Mobil</title>
-
+ <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="../../../static/css/bootstrap.css">
+ <link rel="stylesheet" href="vendors/linericon/style.css">
+ <link rel="stylesheet" href="css/font-awesome.min.css">
+ <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+ <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+ <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+ <link rel="stylesheet" href="vendors/animate-css/animate.css">
+ <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+ <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+ <!-- main css -->
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/responsive.css">
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,25 +34,8 @@
     type="text/css">
   <link href="static/css/styles.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="static/js/scripts.js"></script>
-  <style>
-    body {}
 
-    .card {
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-      width: 100%;
-    }
-
-    .card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    }
-
-    .container {
-      padding: 2px 16px;
-    }
-  </style>
-</head>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
   <div class="container">
@@ -54,75 +50,222 @@
       </div>
     </div>
   </div>
-  <header class="masthead text-white text-center"
-    style="  position: relative;background-color: #343a40;background: url('https://clearcutpainting.co.uk/wp-content/uploads/2019/09/top-16-essential-painting-tools.jpg') no-repeat center center;background-size: cover;padding-top: 8rem;padding-bottom: 8rem;">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <h1 class="mb-5" style="color:white">Get instant access to reliable and affordable services</h1>
+  <style>
+      div.background {
+        background: url('https://www.powerhome.com/wp-content/uploads/2019/03/solar-panel-finance-installation-tablet.jpg') no-repeat center center;
+      
+        position:relative;
+        background-size: cover;
+       
+        
+        
+      }
+      
+      div.transbox {
+        width:100%;
+        height:100%;
+     
+        background-color:rgba(31, 50, 95, 0.513);
+        border: 1px solid transparent;
+        opacity: 0.8;
+        filter: alpha(opacity=60); /* For IE8 and earlier */
+      }
+      
+      div.transbox p {
+        height:300px;
+        font-weight: bold;
+        font-size: 282%;
+        color: rgba(255, 255, 255, 0.602);
+        text-align: center;
+        padding-top:55px;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <div class="background" >
+        <div class="transbox" >
+          <p>YOUR SERVICE IS A CLICK AWAY</p>
+          <div  id="buttons" style="border:px solid;padding-left:35%;padding-bottom: 10%;">
+          <a href="{% url 'profile' %}" ><button class="btn btn-blog btn-lg btn-primary">Register your business</button></a>
+          <button  class="btn btn-blog btn-lg btn-primary" onclick="window.location.href = 'service.html'">Get a service</button>
         </div>
-        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-          <form>
-            <div class="form-row">
-
-
-            </div>
-          </form>
         </div>
       </div>
-    </div>
-  </header>
+      
+  
+ 
 
   <!-- category Showcases -->
 
-  <a href="{% url 'profile' %}"><button>Register your business</button></a>
-  <button onclick="window.location.href = 'service.html'">Get a service</button>
-  {% if user.is_authenticated%}
-  <p><a href="{% url 'logout' %}"></a></p>
-  {% else %}
-  <p><a href="{% url 'login' %}"></a></p>
-  {% endif %}
+  <br>
+  <br>
+  <br>
+ <br>
 
+ <h1 style=" text-align: center;text-decoration-line: underline">About us</h1>
+ <br>
+ <br>
+ <br>
+
+ <h3 style="text-align: center">Mobil aims at connecting you with the most qualifield professionals in every field that we are working with</h3>
+ <h3 style="text-align: center">We guarrantee a hustle free service delivery</h3>
  
- 
+ <br>
+ <br>
+
+
+
   <section class="showcase bg-light text-center">
     <div class="container-fluid p-0"
       style="height: 400px; background: url('https://www.familyvacationcritic.com/uploads/sites/19/2019/08/teen-laptop-smiling-books.jpg')no-repeat center center;background-size: cover;">
-      <div style="background-color:rgb(192, 182, 182);margin-left: 50px;margin-top:20px;width: 200px;text-align: left"
+      <div
+        style="background-color:rgba(131, 170, 241, 0.479);margin-left: 50px;margin-top:20px;width: 250px;text-align: left;height:100%"
         class="row">
-        <h1 style="text-align: center">Why do you choose Mobil?</h1>
-        <p style="padding: 10px 0 0 0;">Your satisfaction and safety are our primary concerns. When you choose mobil, you
+        <h1 style="text-align: center">Why Work with Mobil?</h1>
+        <p style="padding: 10px 0 0 0;">Your satisfaction and safety are our primary concerns. When you choose mobil,
+          you
           know you'll be well taken care of. We'll work to make it right if you're not immediately satisfied.</p>
       </div>
 
     </div>
+<br>
+
+
+
   </section>
-   <!-- Image Showcases -->
-   <section class="showcase bg-light text-center">
-      <div class="container">
-        <div class="row">
-            <div class="col-lg-3"><!-- instal and repair -->
-          <div class="row no-gutters" style="margin-left: 100px;">
-  
-            <div class="card" style="width:200px;cursor: pointer;opacity: 0.9;transform: scale(0.88);">
-                {% for c in categories %}
-                <a href="{%url 'service' category_id=c.id%}"> 
+  <!-- Image Showcases -->
+  <div class="row masonry-container" style="font-size: '2px'">
+    <h1 style="text-align: center;text-decoration-line: underline">Categories
+    </h1>
+    <br>
+    <br>
+    <br>
+
+    {% for c in categories %}
+    <div class="item col-md-3">
       
-              <img class="card-img-top"
-                src="https://eesllcfl.com/wp-content/uploads/2018/03/Electrical-Installation-and-Repair-Services-300x200.jpeg"
-                alt="Card image" style="height: 200px;" >
-                <p><a href="{%url 'service' category_id=c.id%}"> {{c.name}}</a></p>
-              </a>
+        <div class="thumbnail" style="background-color:white">
+         
 
 
-                {%endfor%}
-          
+          <img class="card-img-top" src="{{c.image.url}}" alt="Card image" style="height: 200px;">
+          <p><a href="{%url 'service' category_id=c.id%}"> {{c.name}}</a></p>
+          </a>
+
+
+         
+
+        </div>
+
+      </div>
+      {%endfor%}
+    
+   
+  </div>
+   <!--================My Tabs Area =================-->
+   <section class="mytabs_area p_120">
+      <div class="container">
+        <div class="tabs_inner">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">My Experiences</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">My Education</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <ul class="list">
+            <li>
+              <span></span>
+              <div class="media">
+                <div class="d-flex">
+                  <p>March 2017 to present</p>
+                </div>
+                <div class="media-body">
+                  <h4>Colorlib</h4>
+                  <p>Senior Web Developer <br />Santa monica, Los angeles</p>
+                </div>
               </div>
-  
-            </div>
-          </div>
-        
+            </li>
+            <li>
+              <span></span>
+              <div class="media">
+                <div class="d-flex">
+                  <p>March 2017 to present</p>
+                </div>
+                <div class="media-body">
+                  <h4>Colorlib</h4>
+                  <p>Senior Web Developer <br />Santa monica, Los angeles</p>
+                </div>
+              </div>
+            </li>
+            <li>
+            <span></span>
+              <div class="media">
+                <div class="d-flex">
+                  <p>March 2017 to present</p>
+                </div>
+                <div class="media-body">
+                  <h4>Colorlib</h4>
+                  <p>Senior Web Developer <br />Santa monica, Los angeles</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <ul class="list">
+            <li>
+              <span></span>
+              <div class="media">
+                <div class="d-flex">
+                  <p>March 2017 to present</p>
+                </div>
+                <div class="media-body">
+                  <h4>Colorlib</h4>
+                  <p>Senior Web Developer <br />Santa monica, Los angeles</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span></span>
+              <div class="media">
+                <div class="d-flex">
+                  <p>March 2017 to present</p>
+                </div>
+                <div class="media-body">
+                  <h4>Colorlib</h4>
+                  <p>Senior Web Developer <br />Santa monica, Los angeles</p>
+                </div>
+              </div>
+            </li>
+            <li>
+            <span></span>
+              <div class="media">
+                <div class="d-flex">
+                  <p>March 2017 to present</p>
+                </div>
+                <div class="media-body">
+                  <h4>Colorlib</h4>
+                  <p>Senior Web Developer <br />Santa monica, Los angeles</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+    <!--================End My Tabs Area =================-->
+   
+ 
+  </div>
+
+
 </body>
 
 </html>
